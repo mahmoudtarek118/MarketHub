@@ -1,5 +1,5 @@
 # MarketHub
-# MarketHub
+
 ## About
 MarketHub is an online marketplace platform designed to connect buyers and sellers in a user-friendly and secure environment. This repository contains the codebase and Scrum setup for the project.
 
