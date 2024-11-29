@@ -1,0 +1,15 @@
+.filters {
+    width: 20%;
+    padding: 1rem;
+    background-color: #f4f4f4;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .filters {
+      width: 100%;
+      order: 2; /* Move below the product grid */
+      margin-bottom: 1rem;
+    }
+  }
+  
