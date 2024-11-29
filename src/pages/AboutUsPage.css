@@ -1,0 +1,239 @@
+/* General Page Styling */
+.about-us-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* Light background for better contrast */
+    background: linear-gradient(to right, #f0f0f0, #ffffff); /* Added gradient background */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    transition: all 0.3s ease; /* Smooth transition for page load */
+}
+
+/* Header Styling */
+.about-us-page h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on heading */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Fade-in keyframe */
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-us-page h2 {
+    font-size: 2.2rem;
+    color: #2980b9;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Shadow effect on subheading */
+}
+
+/* Styling for the Image */
+.about-us-image {
+    display: flex;
+    justify-content: center; /* Center the image container */
+    align-items: center;
+    gap: 20px; /* Spacing between the images */
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.about-us-image img {
+    width: 100%;
+    max-width: 350px; /* Limit the size of each image */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover; /* Ensure the image fits the container without stretching */
+}
+
+.about-us-image img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    cursor: pointer; /* Pointer cursor for image hover */
+}
+
+/* About Section (Company Overview, Mission, Values) */
+.about-section {
+    margin-bottom: 50px;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation for section */
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #34495e;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif; /* Change font for better readability */
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+.about-section li {
+    margin-bottom: 15px;
+    padding-left: 20px; /* Add padding for bullet alignment */
+}
+
+.about-section li strong {
+    color: #2ecc71; /* Green for values */
+    font-weight: bold;
+}
+
+.about-section li:before {
+    content: '✓';
+    color: #2ecc71; /* Green checkmark */
+    margin-right: 10px;
+}
+
+/* Mission Section */
+.mission-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease-in-out; /* Mission section fade-in */
+}
+
+.mission-section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #7f8c8d;
+}
+
+/* Team Section: Cards Layout */
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.team-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    margin-top: 15px;
+    color: #2c3e50;
+}
+
+.team-card p {
+    color: #7f8c8d;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-us-page {
+        padding: 20px;
+    }
+
+    .about-us-page h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-us-page h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+
+    .about-section li {
+        font-size: 1rem;
+    }
+
+    .about-us-image img {
+        max-width: 100%; /* Full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .team-card {
+        width: 45%; /* Adjust card size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-us-page h1 {
+        font-size: 2rem;
+    }
+
+    .about-us-page h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section li {
+        font-size: 0.9rem;
+    }
+
+    .mission-section {
+        padding: 20px;
+    }
+
+    .team-card {
+        width: 100%; /* Stack cards on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        width: 100%; /* Make CTA button full width on mobile */
+        padding: 15px;
+    }
+}

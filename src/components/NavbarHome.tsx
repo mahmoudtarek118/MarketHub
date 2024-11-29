@@ -4,7 +4,7 @@ import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
-const Navbar: React.FC = () => {
+const NavbarHome: React.FC = () => {
   const { cartCount } = useCart();
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
@@ -39,8 +39,11 @@ const Navbar: React.FC = () => {
               {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
             </NavLink>
           </li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+          <li>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>
+              About Us
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <div className="auth-buttons">
@@ -55,8 +58,9 @@ const Navbar: React.FC = () => {
           </>
         )}
       </div>
+
     </motion.header>
   );
 };
 
-export default Navbar;
+export default NavbarHome;

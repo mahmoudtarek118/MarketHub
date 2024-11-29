@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import './ShoppingCart.css';
 import { toast } from 'react-toastify';
+import shoes from '../assets/Shoes/{29BA62A7-D1EF-45F7-BC9E-B3A656A663BB}.png'; 
+
 
 const ShoppingCart: React.FC = () => {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
@@ -78,7 +80,7 @@ const ShoppingCart: React.FC = () => {
               {cartItems.map((item) => (
                 <div key={item.id} className="cart-item">
                   <div className="item-image">
-                    <img src={`https://via.placeholder.com/80?text=${item.name}`} alt={item.name} />
+                    <img src={shoes} />
                   </div>
                   <div className="item-details">
                     <h3>{item.name}</h3>

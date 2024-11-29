@@ -39,8 +39,11 @@ const NavbarOther: React.FC = () => {
               {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
             </NavLink>
           </li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+          <li>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>
+              About Us
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <div className="auth-buttons">
@@ -50,9 +53,11 @@ const NavbarOther: React.FC = () => {
           </button>
         ) : (
           <>
+
           </>
         )}
       </div>
+
     </motion.header>
   );
 };

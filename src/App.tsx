@@ -7,6 +7,10 @@ import Home from './pages/Home';
 import ProductListing from './pages/ProductListing';
 import ShoppingCart from './pages/ShoppingCart';
 import CheckoutPage from './pages/CheckoutPage';
+import AboutUsPage from './pages/AboutUsPage'; // import AboutUsPage component
+import ProductViewPage from './pages/ProductView'; // Import the Product View page
+
+
 
 
 const App: React.FC = () => {
@@ -19,6 +23,8 @@ const App: React.FC = () => {
           <Route path="/products" element={<ProductListing />} />
           <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/product/:productId" element={<ProductViewPage />} />
         </Routes>
       </CartProvider>
 
