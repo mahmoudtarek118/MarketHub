@@ -1,0 +1,224 @@
+/* General Page Enhancements */
+.checkout-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  /* Heading Styling */
+  .checkout-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Checkout Form Container */
+  .checkout-form {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Section Styling */
+  .checkout-section, .payment-section, .order-summary {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+  
+  /* Section Title */
+  .checkout-section h2, .payment-section h2, .order-summary h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #007a7f;
+  }
+  
+  /* Input Fields */
+  .checkout-section input,
+  .payment-section input,
+  .order-summary input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+  }
+  
+  /* Input Focus States */
+  .checkout-section input:focus,
+  .payment-section input:focus,
+  .order-summary input:focus {
+    border: 1px solid #007a7f;
+    box-shadow: 0 0 5px rgba(0, 122, 127, 0.5); /* Smooth focus box shadow */
+  }
+  
+  /* Placeholder Styling */
+  .checkout-section input::placeholder,
+  .payment-section input::placeholder {
+    font-style: italic;
+    color: #888;
+  }
+  
+  /* Tooltip Styling */
+  .checkout-section .input-with-tooltip {
+    position: relative;
+  }
+  
+  .checkout-section .input-with-tooltip:hover::after {
+    content: 'Please provide the required details for shipping';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    background-color: #007a7f;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInTooltip 0.3s forwards;
+  }
+  
+  /* Tooltip Animation */
+  @keyframes fadeInTooltip {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Buttons */
+  .checkout-button, .place-order-button, .cancel-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  /* Hover and Active States for Buttons */
+  .checkout-button:hover, .place-order-button:hover, .cancel-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Smooth shadow effect on hover */
+  }
+  
+  .checkout-button:active, .place-order-button:active, .cancel-button:active {
+    transform: translateY(1px);
+    box-shadow: none; /* Remove shadow on click */
+  }
+  
+  /* Place Order Button Styling */
+  .place-order-button {
+    background-color: #28a745; /* Green for success */
+    color: white;
+  }
+  
+  .place-order-button:hover {
+    background-color: #218838; /* Darker green */
+  }
+  
+  .place-order-button:active {
+    background-color: #1e7e34;
+  }
+  
+  .place-order-button:focus {
+    outline: 2px solid #0056b3; /* Focus outline for accessibility */
+    outline-offset: 4px;
+  }
+  
+  /* Cancel Button Styling */
+  .cancel-button {
+    background-color: #ff4d4d; /* Red for cancellation */
+    color: white;
+  }
+  
+  .cancel-button:hover {
+    background-color: #e60000; /* Darker red */
+  }
+  
+  .cancel-button:active {
+    background-color: #cc0000;
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    color: #d9534f;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  
+  /* Success Message Styling */
+  .success-message {
+    color: #007a7f;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  
+  /* Accessibility: Focus and Hover Enhancements */
+  button, input[type="text"], input[type="number"], input[type="email"], select {
+    transition: all 0.3s ease;
+  }
+  
+  button:focus, input:focus {
+    outline: 3px solid #007a7f; /* Outline for accessibility on focus */
+  }
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 768px) {
+    .checkout-form {
+      flex-direction: column;
+    }
+  
+    .order-summary {
+      color: #007a7f;
+
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .checkout-page h1 {
+      color: #007a7f;
+      font-size: 2rem;
+    }
+  
+    .place-order-button {
+      font-size: 1.4rem;
+      padding: 1rem;
+    }
+  
+    .place-order-button:active {
+      background-color: #1e7e34;
+    }
+  
+    .place-order-button:focus {
+      outline-offset: 4px;
+    }
+  }
+  
+  /* Smooth UI Transitions */
+  .checkout-section input, .payment-section input, .checkout-section select {
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .checkout-button, .cancel-button, .place-order-button {
+    transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
