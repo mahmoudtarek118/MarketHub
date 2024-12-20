@@ -1,0 +1,135 @@
+/* General Page Styling */
+.product-listing {
+  padding: 2rem;
+}
+
+/* Filter Button */
+.filter-button {
+  background: #00adb5;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+
+.filter-button:hover {
+  background: #007a7f;
+}
+
+/* Offcanvas Styling */
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Hidden initially */
+  width: 300px;
+  height: 100%;
+  background: #f7f7f7;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.offcanvas.show {
+  left: 0; /* Slide into view */
+}
+
+/* Offcanvas Content */
+.offcanvas-content {
+  padding: 1.5rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  float: right;
+}
+
+.close-button:hover {
+  color: #00adb5;
+}
+
+/* Backdrop for Dimmed Effect */
+.offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dimmed background */
+  z-index: 999; /* Below the offcanvas */
+  display: none; /* Hidden initially */
+}
+
+.offcanvas.show + .offcanvas-backdrop {
+  display: block; /* Show backdrop when offcanvas is visible */
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.product-grid .product-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-grid .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-grid .product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-grid .product-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.product-grid .product-card p {
+  font-size: 1rem;
+  color: #00adb5;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .offcanvas {
+    width: 80%; /* Adjust offcanvas width for smaller screens */
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .filter-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .product-grid .product-card h3 {
+    font-size: 1rem;
+  }
+}
